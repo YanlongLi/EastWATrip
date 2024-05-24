@@ -1,6 +1,6 @@
 % \documentclass{IEEEtran}
 \documentclass{article}
-\title{A Three-Day Exploration of Eastern Washington}
+\title{A Three-Day Exploration of Eastern Washington (draft)}
 
 % Packages
 \usepackage[utf8]{inputenc} % UTF-8 encoding
@@ -14,9 +14,9 @@
 \usepackage{geometry}
 \usepackage{array}
 \usepackage[dvipsnames]{xcolor}
+\usepackage[normalem]{ulem} % For \sout (strikethrough)
 
 % Hyperlinks
-
 \newcommand{\WildHorseRenewableEnergyCenter}{\href{https://maps.app.goo.gl/HyvLjvWAAMydgWg18}{Wild Horse Renewable Energy Center}}
 \newcommand{\WildHorseMonument}{\href{https://maps.app.goo.gl/RgAQq2vTrCyx1wKb7}{Wild Horse Monument}}
 \newcommand{\ScenicOverlookOftheColumbiaRiver}{\href{https://maps.app.goo.gl/EnTs5yzFyGQKeNPo8}{Scenic Overlook of the Columbia River}}
@@ -26,8 +26,7 @@
 \newcommand{\SteptoeButteStatePark}{\href{https://maps.app.goo.gl/6vj1gx25XB5dEsUW8}{Steptoe Butte State Park}}
 \newcommand{\Spokane}{\href{https://google.com}{Spokane}}
 \newcommand{\DryFallsVisitorCenter}{\href{https://maps.app.goo.gl/ikKJMB3SaaTAfcYT9}{Dry Falls Visitor Center}}
-\newcommand{\LakeChelanStatePark}{\href{https://maps.app.goo.gl/SG8UQnPoWd1ubnXq7}{Lake Chelan State Park}}
-
+\newcommand{\LakeChelanStatePark}{\href{https://maps.app.goo.gl/SG8UQnPoWd1ubnXq7}{\sout{Lake Chelan State Park}}}
 \newcommand{\WildHorseMonumentWebsite}{\href{https://www.wta.org/go-hiking/hikes/wild-horses-monument}{Wild Horse Monument Website}}
 
 % Define colors.
@@ -44,9 +43,9 @@
 \tikzstyle{linkingLineDayOne} = [draw=dayOneColor,ultra thick]
 \tikzstyle{linkingLineDayTwo} = [draw=dayTwoColor,ultra thick]
 \tikzstyle{linkingLineDayThree} = [draw=dayThreeColor,ultra thick]
-\tikzstyle{locationTextDayOne} = [font=\sffamily\bfseries\normalsize,align=left,fill=dayOneColor,text=white,line width=0.5mm,inner sep=6pt,fill opacity=0.5,text opacity=1,scale=1,draw=white,rounded corners]
-\tikzstyle{locationTextDayTwo} = [font=\sffamily\bfseries\normalsize,align=left,fill=dayTwoColor,text=white,line width=0.5mm,inner sep=6pt,fill opacity=0.5,text opacity=1,scale=1,draw=white,rounded corners]
-\tikzstyle{locationTextDayThree} = [font=\sffamily\bfseries\normalsize,align=left,fill=dayThreeColor,text=white,line width=0.5mm,inner sep=6pt,fill opacity=0.5,text opacity=1,scale=1,draw=white,rounded corners]
+\tikzstyle{locationTextDayOne} = [font=\sffamily\bfseries\normalsize,align=left,fill=dayOneColor,text=white,line width=0.5mm,inner sep=6pt,fill opacity=0.75,text opacity=1,scale=1,draw=white,rounded corners]
+\tikzstyle{locationTextDayTwo} = [font=\sffamily\bfseries\normalsize,align=left,fill=dayTwoColor,text=white,line width=0.5mm,inner sep=6pt,fill opacity=0.75,text opacity=1,scale=1,draw=white,rounded corners]
+\tikzstyle{locationTextDayThree} = [font=\sffamily\bfseries\normalsize,align=left,fill=dayThreeColor,text=white,line width=0.5mm,inner sep=6pt,fill opacity=0.75,text opacity=1,scale=1,draw=white,rounded corners]
 \tikzstyle{durationText} = [font=\sffamily\bfseries\normalsize,align=left,fill=mycolor,text=white,opacity=1,text opacity=1,scale=0.75]
 \tikzstyle{timelineText} = [font=\sffamily\bfseries\normalsize,align=left,fill=CadetBlue,text=white,opacity=1,text opacity=1,scale=0.75]
 \tikzstyle{timelineDotFill} = [fill=Gray,draw=white,thick]
@@ -137,7 +136,7 @@
       \node[timelineText] at (\DayOnePFourX,\DayOneYOne) {16:00-17:30};
 
       % Pullman
-      \draw[myline] (\DayTwoTimelineX,0.5) -- (\DayTwoTimelineX,\DayOneTimelineY) -- (14.6,2.5) -- (14.6,4.2);
+      \draw[linkingLineDayTwo] (\DayTwoTimelineX,0.5) -- (\DayTwoTimelineX,\DayOneTimelineY) -- (14.6,2.5) -- (14.6,4.2);
       \node[timelineText] at (\DayTwoTimelineX,\DayOneYOne) {19:30 \Pullman};
 
       % Dots
@@ -163,7 +162,7 @@
       \node[locationTextDayTwo] at (\DayTwoTimelineX-2.8,\DayTwoPTwoY+1.6) {\SteptoeButteStatePark};
 
       % Spokane
-      \draw[myline] (\DayTwoXOne,\DayTwoPFourY) -- (\DayTwoTimelineX,\DayTwoPFourY) -- (14.05,10) -- (14.05,8.15);
+      \draw[linkingLineDayThree] (\DayTwoXOne,\DayTwoPFourY) -- (\DayTwoTimelineX,\DayTwoPFourY) -- (13.90,10) -- (13.90,8.35);
 
       % timeline dots
       \draw[<->,myline] (\DayTwoTimelineX,\DayTwoPOneY) -- (\DayTwoTimelineX,\DayTwoPTwoY) node[midway,right,durationText] {0.5 hours};
@@ -187,11 +186,11 @@
       \draw[myline] (\DayThreePOneX,\DayThreeYOne) -- (\DayThreePOneX,\DayThreeTimelineY);
 
       % Dry Falls Visitor Center
-      \draw[linkingLineDayThree] (\DayThreePTwoX,\DayThreeYOne) -- (\DayThreePTwoX,\DayThreeTimelineY) -- (\DayThreePTwoX,\DayThreeTimelineY-3.0) -- (8.7,8.0);
+      \draw[linkingLineDayThree] (\DayThreePTwoX,\DayThreeYOne) -- (\DayThreePTwoX,\DayThreeTimelineY) -- (\DayThreePTwoX,\DayThreeTimelineY-3.0) -- (8.8,8.1);
       \node[locationTextDayThree] at (\DayThreePTwoX,\DayThreeTimelineY-3.0) {\DryFallsVisitorCenter};
 
       % Lake Chelan State Park
-      \draw[linkingLineDayThree] (\DayThreePThreeX,\DayThreeYOne) -- (\DayThreePThreeX,\DayThreeTimelineY) -- (\DayThreePThreeX,\DayThreeTimelineY-2) -- (6.5,9.0);
+      \draw[linkingLineDayThree] (\DayThreePThreeX,\DayThreeYOne) -- (\DayThreePThreeX,\DayThreeTimelineY) -- (\DayThreePThreeX,\DayThreeTimelineY-2) -- (6.4,9.2);
       \node[locationTextDayThree] at (\DayThreePThreeX,\DayThreeTimelineY-2) {\LakeChelanStatePark};
 
       % Bellevue Square
@@ -208,9 +207,9 @@
       \filldraw[timelineDotFillDayThree] (\DayThreePThreeX,\DayThreeTimelineY) circle [timelineCircle];
       \filldraw[timelineDotFill] (\DayThreePFourX,\DayThreeTimelineY) circle [timelineCircle];
 
-      \node[timelineText] at (\DayThreePOneX,\DayThreeYOne) {10:00};
-      \node[timelineText] at (\DayThreePTwoX,\DayThreeYOne) {12:00-13:00};
-      \node[timelineText] at (\DayThreePFourX,\DayThreeYOne) {17:00};
+      \node[timelineText] at (\DayThreePOneX,\DayThreeYOne) {09:00};
+      \node[timelineText] at (\DayThreePTwoX,\DayThreeYOne) {11:00-12:00};
+      \node[timelineText] at (\DayThreePFourX,\DayThreeYOne) {16:00};
 
     % Draw a circle on the image
     % \draw[red,ultra thick] (3,2) circle (0.5);
@@ -227,7 +226,7 @@
 % Abstraction
 % \begin{abstract}
 % 
-% This paper presents a three-day travel itinerary for exploring the natural wonders of Eastern Washington.
+% This doc presents a three-day travel itinerary for exploring the natural wonders of Eastern Washington.
 % The journey encompasses a range of breathtaking landscapes, from the Columbia River to the serene beauty of Lake Chelan.
 % Each day is planned to optimize time and provide travelers with an enriching and unforgettable experience.
 % The itinerary includes visits to iconic sites such as Palouse Falls State Park, Steptoe Butte State Park, and Dry Falls Visitor Center, among others.
@@ -241,26 +240,30 @@
 \section{Basic Information}
 
 Travel Date: 05/18/2024(Sat.) - 05/20/2024 (Mon.) \\
-Travelers: T1, T2, T3, unknown.
+Travelers: P1, P2, P3, unknown.
 
 % Preparation
 \section{Preparation}
-\subsection{Accommodation Options for Day 1 and Day2}
+\subsection{Accommodation for Day 1 and Day2 (TBD)}
 
 \begin{itemize}
   \item{Day 1 in \Pullman}
   \begin{itemize}
-    \item{\href{https://maps.app.goo.gl/EwDjgqSxP142zTK69}{Residence Inn by Marriott Pullman}}
-    \item{\href{https://maps.app.goo.gl/W1NdB4NeXamTnb2G7}{Coast Hilltop Inn}}
-    \item{AirBnb: \href{https://www.airbnb.com/rooms/38524859?adults=3&check_in=2024-05-18&check_out=2024-05-19}{Charming Condo in Quiet Neighborhood}, \href{https://maps.app.goo.gl/FeBiBENJo8RmT77B7}{Location}}
-    \item{AirBnb: \href{https://www.airbnb.com/rooms/959047415867256733?adults=3&check_in=2024-05-18&check_out=2024-05-19}{Camp Palousa}}
+    \item{\textbf{*AirBnb: \href{https://www.airbnb.com/rooms/38524859?adults=3&check_in=2024-05-18&check_out=2024-05-19}{Charming Condo in Quiet Neighborhood}, \href{https://maps.app.goo.gl/FeBiBENJo8RmT77B7}{Location on Map}}}
+    \item{\href{https://maps.app.goo.gl/EwDjgqSxP142zTK69}{\sout{Residence Inn by Marriott Pullman}}}
+    \item{\href{https://maps.app.goo.gl/W1NdB4NeXamTnb2G7}{\sout{Coast Hilltop Inn}}}
+    \item{AirBnb: \href{https://www.airbnb.com/rooms/959047415867256733?adults=3&check_in=2024-05-18&check_out=2024-05-19}{\sout{Camp Palousa}}}
     \item{...}
   \end{itemize}
   \item{Day 2 in Spokane (or somewhere between \Spokane and \DryFallsVisitorCenter)}
   \begin{itemize}
+    \item{\textbf{*AirBnB: \href{https://www.airbnb.com/rooms/630734250409085676?adults=3&check_in=2024-05-19&check_out=2024-05-20}{Cozy Boho Home w/King \& Queen bed}, \href{https://maps.app.goo.gl/bG2gE9wyuAM1cKMC9}{Location on Map}}}
+    \item{AirBnB: \href{https://www.airbnb.com/rooms/550276139410529621?adults=3&check_in=2024-05-19&check_out=2024-05-20}{\sout{New 2 Bed 2 Bath Near Perry District and DT!}}}
+    \item{AirBnB: \href{https://www.airbnb.com/rooms/802449944852130564?adults=3&check_in=2024-05-19&check_out=2024-05-20}{\sout{Cozy place away from home (3 bedrooms).}}}
+    \item{AirBnB: \href{https://www.airbnb.com/rooms/619084546453426629?adults=3&check_in=2024-05-19&check_out=2024-05-20}{\sout{Gorgeous 3 Bedroom Centrally Located Spokane Home}}}
+    \item{AirBnb: \href{https://www.airbnb.com/rooms/908205972491427939?adults=3&check_in=2024-05-19&check_out=2024-05-20}{\sout{Renovated 2 bed, 2 bath, Near Arena and Downtown}}, \href{https://maps.app.goo.gl/YyZHSUGSai8nPxxVA}{Location on Map}}
     \item{\href{https://maps.app.goo.gl/q4VfxJgmbbmMeNXL6}{The Davenport Lusso, Autograph Collection}}
     \item{\href{https://maps.app.goo.gl/Ca7z3rT2maDN9GnBA}{Hampton Inn Spokane}}
-    \item{AirBnb: \href{https://www.airbnb.com/rooms/908205972491427939?adults=3&check_in=2024-05-19&check_out=2024-05-20}{Renovated 2 bed, 2 bath, Near Arena and Downtown}, \href{https://maps.app.goo.gl/YyZHSUGSai8nPxxVA}{Location}}
     \item{...}
   \end{itemize}
 \end{itemize}
@@ -309,14 +312,14 @@ Travelers: T1, T2, T3, unknown.
   \item{siteviewing}
 \end{itemize}
 
-  \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-    % Include the JPEG image
-      \node[anchor=south west,inner sep=0,opacity=1,scale=0.5] (image) at (0,0) {\includegraphics[width=1.3\textwidth]{_images/Wild Horse Renewable Energy Center.jpg}}; % Change "example-image.jpg" to the filename of your JPEG image
-    \end{tikzpicture}
-    \caption{Wild Horse Renewable Energy Center}
-  \end{figure}
+  %% \begin{figure}[H]
+  %%   \centering
+  %%   \begin{tikzpicture}
+  %%   % Include the JPEG image
+  %%     \node[anchor=south west,inner sep=0,opacity=1,scale=0.5] (image) at (0,0) {\includegraphics[width=1.3\textwidth]{_images/Wild Horse Renewable Energy Center.jpg}}; % Change "example-image.jpg" to the filename of your JPEG image
+  %%   \end{tikzpicture}
+  %%   \caption{Wild Horse Renewable Energy Center}
+  %% \end{figure}
 
 \subsection{\WildHorseMonument}
 \begin{itemize}
@@ -326,14 +329,14 @@ Travelers: T1, T2, T3, unknown.
   This trail is great for hiking and walking, and it's unlikely you'll encounter many other people while exploring. The best times to visit this trail are March through July.}}
 \end{itemize}
 
-  \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-    % Include the JPEG image
-      \node[anchor=south west,inner sep=0,opacity=1,scale=0.5] (image) at (0,0) {\includegraphics[width=1.3\textwidth]{_images/Wild Horse Monument.jpg}}; % Change "example-image.jpg" to the filename of your JPEG image
-    \end{tikzpicture}
-    \caption{Wild Horse Monument}
-  \end{figure}
+  %% \begin{figure}[H]
+  %%   \centering
+  %%   \begin{tikzpicture}
+  %%   % Include the JPEG image
+  %%     \node[anchor=south west,inner sep=0,opacity=1,scale=0.5] (image) at (0,0) {\includegraphics[width=1.3\textwidth]{_images/Wild Horse Monument.jpg}}; % Change "example-image.jpg" to the filename of your JPEG image
+  %%   \end{tikzpicture}
+  %%   \caption{Wild Horse Monument}
+  %% \end{figure}
 
 \subsection{\ScenicOverlookOftheColumbiaRiver}
 
@@ -341,28 +344,28 @@ Travelers: T1, T2, T3, unknown.
   \item{Near view of Columbia River}
 \end{itemize}
 
-  \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-    % Include the JPEG image
-      \node[anchor=south west,inner sep=0,opacity=1,scale=0.5] (image) at (0,0) {\includegraphics[width=1.3\textwidth]{_images/Scenic Overlook of the Columbia River.jpg}}; % Change "example-image.jpg" to the filename of your JPEG image
-    \end{tikzpicture}
-    \caption{Scenic Overlook of the Columbia River}
-  \end{figure}
+  %% \begin{figure}[H]
+  %%   \centering
+  %%   \begin{tikzpicture}
+  %%   % Include the JPEG image
+  %%     \node[anchor=south west,inner sep=0,opacity=1,scale=0.5] (image) at (0,0) {\includegraphics[width=1.3\textwidth]{_images/Scenic Overlook of the Columbia River.jpg}}; % Change "example-image.jpg" to the filename of your JPEG image
+  %%   \end{tikzpicture}
+  %%   \caption{Scenic Overlook of the Columbia River}
+  %% \end{figure}
 
 \subsection{\PalouseFallsStatePark}
 \begin{itemize}
   \item{Moderate hiking to the bottom of Palouse Falls}
   \item{\href{https://www.alltrails.com/parks/us/washington/palouse-falls-state-park}{All Trails}}
 \end{itemize}
-  \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-    % Include the JPEG image
-      \node[anchor=south west,inner sep=0,opacity=1,scale=0.5] (image) at (0,0) {\includegraphics[width=1.3\textwidth]{_images/Palouse Falls State Park.jpg}}; % Change "example-image.jpg" to the filename of your JPEG image
-    \end{tikzpicture}
-    \caption{Palouse Falls State Park}
-  \end{figure}
+  %% \begin{figure}[H]
+  %%   \centering
+  %%   \begin{tikzpicture}
+  %%   % Include the JPEG image
+  %%     \node[anchor=south west,inner sep=0,opacity=1,scale=0.5] (image) at (0,0) {\includegraphics[width=1.3\textwidth]{_images/Palouse Falls State Park.jpg}}; % Change "example-image.jpg" to the filename of your JPEG image
+  %%   \end{tikzpicture}
+  %%   \caption{Palouse Falls State Park}
+  %% \end{figure}
 
 \subsection{Pullman}
 \begin{itemize}
@@ -400,14 +403,14 @@ Travelers: T1, T2, T3, unknown.
   \item{Pine Ridge trail, a 3.5 mile loop, 1.5 hours (Optional). \href{https://www.alltrails.com/trail/us/washington/kamiak-butte-trail}{All Trails}}
 \end{itemize}
 
-  \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-    % Include the JPEG image
-      \node[anchor=south west,inner sep=0,opacity=1,scale=0.5] (image) at (0,0) {\includegraphics[width=1.3\textwidth]{_images/Kamiak Butte Country Park.jpg}}; % Change "example-image.jpg" to the filename of your JPEG image
-    \end{tikzpicture}
-    \caption{Kamiak Butte Country Park}
-  \end{figure}
+  %% \begin{figure}[H]
+  %%   \centering
+  %%   \begin{tikzpicture}
+  %%   % Include the JPEG image
+  %%     \node[anchor=south west,inner sep=0,opacity=1,scale=0.5] (image) at (0,0) {\includegraphics[width=1.3\textwidth]{_images/Kamiak Butte Country Park.jpg}}; % Change "example-image.jpg" to the filename of your JPEG image
+  %%   \end{tikzpicture}
+  %%   \caption{Kamiak Butte Country Park}
+  %% \end{figure}
 
 \subsection{Lunch at \href{https://maps.app.goo.gl/bh54WPhsrkuKu8Ae8}{Colfax} or skip}
 
@@ -416,14 +419,14 @@ Travelers: T1, T2, T3, unknown.
   \item{No Hiking.}
 \end{itemize}
 
-  \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-    % Include the JPEG image
-      \node[anchor=south west,inner sep=0,opacity=1,scale=0.5] (image) at (0,0) {\includegraphics[width=1.3\textwidth]{_images/Steptoe Butte State Park.jpg}}; % Change "example-image.jpg" to the filename of your JPEG image
-    \end{tikzpicture}
-    \caption{Steptoe Butte State Park}
-  \end{figure}
+  %% \begin{figure}[H]
+  %%   \centering
+  %%   \begin{tikzpicture}
+  %%   % Include the JPEG image
+  %%     \node[anchor=south west,inner sep=0,opacity=1,scale=0.5] (image) at (0,0) {\includegraphics[width=1.3\textwidth]{_images/Steptoe Butte State Park.jpg}}; % Change "example-image.jpg" to the filename of your JPEG image
+  %%   \end{tikzpicture}
+  %%   \caption{Steptoe Butte State Park}
+  %% \end{figure}
 
 \subsection{\Spokane}
 Explorer Spokane
@@ -466,14 +469,14 @@ Explorer Spokane
   \end{figure}
 \subsection{\DryFallsVisitorCenter}
 
-  \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-    % Include the JPEG image
-      \node[anchor=south west,inner sep=0,opacity=1,scale=0.5] (image) at (0,0) {\includegraphics[width=1.3\textwidth]{_images/Dry Falls Visitor Center.jpg}}; % Change "example-image.jpg" to the filename of your JPEG image
-    \end{tikzpicture}
-    \caption{Dry Falls Visitor Center}
-  \end{figure}
+  %% \begin{figure}[H]
+  %%   \centering
+  %%   \begin{tikzpicture}
+  %%   % Include the JPEG image
+  %%     \node[anchor=south west,inner sep=0,opacity=1,scale=0.5] (image) at (0,0) {\includegraphics[width=1.3\textwidth]{_images/Dry Falls Visitor Center.jpg}}; % Change "example-image.jpg" to the filename of your JPEG image
+  %%   \end{tikzpicture}
+  %%   \caption{Dry Falls Visitor Center}
+  %% \end{figure}
 
 \subsection{\LakeChelanStatePark}
 (May have to skip)
